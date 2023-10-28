@@ -1,0 +1,118 @@
+
+<html>
+<head>
+    <title>Pagina de login</title>
+    <style>
+        /* Stilurile CSS pentru codul existent */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form label {
+            margin-bottom: 10px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+
+        .login-form .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .login-form .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        /* Stilul pentru a adăuga spațiu între butoane */
+        .login-form button + button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Formular de login</h1>
+        <form class="login-form">
+            <label for="username">Utilizator:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Parola:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="button" onclick="login('client')">Login-client</button>
+            <button type="button" onclick="login('admin')">Login-admin</button>
+        </form>
+        <!-- Link de redirecționare către o altă pagină -->
+       
+    </div>
+    <script>
+        
+        function login(userType) {
+            // Verificăm credențialele în mod simulat
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Exemplu de verificare a credențialelor (de obicei, se va face pe server)
+            if (userType === 'client' && username === 'client' && password === 'client') {
+                // Redirecționare către pagina indicată pentru client (înlocuiți "index.html" cu adresa dorită)
+                window.location.href = 'index.html';
+            } else if (userType === 'admin' && username === 'admin' && password === 'admin') {
+                // Redirecționare către pagina indicată pentru admin (înlocuiți "pagina_admin.html" cu adresa dorită)
+                window.location.href = 'pagina_admin.html';
+            } else {
+                alert('Login eșuat. Te rugăm să verifici utilizatorul și parola.');
+            }
+        }
+    
+    </script>
+</body>
+</html>
+        
+  

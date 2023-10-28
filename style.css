@@ -1,0 +1,649 @@
+/*--------------------- Google fonts ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* --------------------- CSS Global variables ------------*/
+:root
+{
+	/*------------ Colors -------------*/
+	--primary-color: #963cdd;     /*---- Purple ----*/
+	--secondary-color: #1668b8;   /*---- Blue ------*/
+	--third-color: #000000;       /*----- Black ------*/
+	--fourth-color: #ffffff;      /*---- White ------*/
+	--blue-color: #2540ce;    /*---- Button Blue -----*/
+	--yellow-color: #fcb900;  /*---- Button Yello ----*/
+
+
+	/*------------ Font Size --------------*/
+	--heading-font-size: 1.5rem;
+	--paragraph-font-size: 1rem;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html
+{
+	font-size: 16px;
+}
+
+body
+{
+	font-family: 'Poppins', sans-serif;
+}
+
+.container
+{
+	padding: 2rem;
+}
+
+.heading
+{
+	font-size: 2.2rem;
+	font-weight: 600;
+	line-height: 1.2;
+	padding: 1rem 0;
+}
+
+.sub-heading
+{
+	color: var(--secondary-color);
+	font-size: 1rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+img
+{
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Poppins', sans-serif;
+}
+
+p
+{
+	font-family: 'Inter', sans-serif;
+}
+
+.white
+{
+	color: #ffffff;
+}
+
+.para-line
+{
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.btn
+{
+	padding: 0.8rem 2rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.btn a
+{
+	font-size: 1rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+
+/*-------------------------- Menu style -------------------------*/
+.menu-container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    max-height: 200px; /* Setați înălțimea maximă a imaginii la 40 de pixeli sau oricare altă dimensiune dorită */
+    max-width: auto; /* Lățimea va fi adaptată proporțional în funcție de înălțime */
+    display: inline-block; /* Faceți imaginea să se comporte ca un element inline pentru a se potrivi textului din bara de meniu */
+    vertical-align: middle; /* Ajustați alinierea imaginii pentru a se potrivi cu textul */
+}
+
+.nav-wrapper
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.nav-wrapper ul.nav-list
+{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-wrapper ul.nav-list li 
+{
+  margin-left: 30px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.nav-wrapper ul.nav-list li a
+{
+  color: var(--third-color);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all .5s ease-in-out;
+}
+
+.nav-wrapper ul.nav-list li a:hover, .nav-wrapper ul.nav-list li.active a
+{
+  color: var(--blue-color);
+}
+
+nav ul.dropdown-list
+{
+  list-style-type: none;
+  display: block;
+  background: whitesmoke;
+  padding: 6px 16px;
+  position: absolute;
+  width: max-content;
+  z-index: 9999;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-wrapper ul.dropdown-list li
+{
+  margin-left: 0;
+  padding: 5px 0;
+}
+
+.nav-wrapper ul.dropdown-list li a
+{
+  color: var(--third-color);
+}
+
+.nav-wrapper ul.nav-list li:hover .dropdown-list
+{
+  opacity: 1;
+  pointer-events: auto;
+  animation: moveUp .5s ease-in-out forwards;
+}
+
+
+.nav-wrapper .nav-list li .btn a
+{
+	color: var(--fourth-color);
+}
+
+.nav-wrapper .nav-list li .btn:hover a
+{
+	color: var(--third-color);
+}
+
+@keyframes moveUp
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateX(-50%) translateY(50px);
+  }
+  100%
+  {
+    opacity: 1;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+.hamberger
+{
+  display: none;
+}
+
+.mobile .hamberger
+{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.mobile .hamberger span
+{
+  background: var(--third-color);
+  width: 28px;
+  height: 2px;
+  margin-bottom: 8px;
+}
+
+.mobile ul.nav-list
+{
+  background: -webkit-linear-gradient(45deg, #f5f6fa, #dcdde1);
+  background: linear-gradient(45deg, #f5f6fa, #dcdde1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  opacity: 0;
+  pointer-events: none;
+  transition: All .3s ease-in-out;
+}
+
+.hamberger, .brand
+{
+  z-index: 9999;
+}
+
+.mobile ul.nav-list.open
+{
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+
+.mobile .hamberger span
+{
+  transform-origin: left;
+  transition: all .3s ease-in-out;
+}
+
+.mobile ul.nav-list li a
+{
+  font-size: 20px;
+}
+
+.mobile ul.dropdown-list
+{
+  position: relative;
+  background: transparent;
+  text-align: center;
+  height: 0;
+  overflow-y: hidden;
+  transition: opacity 1s ease-in-out;
+  padding-top: 0;
+}
+
+.mobile .nav-wrapper ul li:hover .dropdown-list
+{
+  height: max-content;
+  padding-top: 6px;
+}
+
+.mobile ul.nav-list li
+{
+  margin-left: 0;
+  text-align: center;
+}
+
+.mobile .nav-wrapper ul.dropdown-list li a
+{
+  color: #7f8fa6;
+}
+
+.mobile .nav-wrapper ul.dropdown-list li a:hover
+{
+	color: var(--third-color);
+}
+/*-------------------------- Menu style -------------------------*/
+
+
+/*----------- Scroll to top --------------*/
+#topBtn
+{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  background: var(--blue-color);
+  color: #white;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+#topBtn ion-icon
+{
+	color: #fff;
+}
+/*----------- Scroll to top --------------*/
+
+/*-------- Blue button ---------*/
+.btn-blue
+{
+	background: var(--blue-color);
+	transition: 0.3s ease-in-out;
+}
+
+.btn-blue:hover
+{
+	background: var(--yellow-color);
+}
+
+.btn-blue a
+{
+	color: var(--fourth-color);
+}
+
+.btn-blue:hover > a
+{
+	color: var(--third-color);
+}
+
+.btn-blue
+{
+	background: var(--blue-color);
+	transition: 0.3s ease-in-out;
+}
+
+.btn-blue:hover
+{
+	background: var(--yellow-color);
+}
+
+.btn-blue a
+{
+	color: var(--fourth-color);
+}
+
+.btn-blue:hover > a
+{
+	color: var(--third-color);
+}
+
+/*---------- Yellow btn ----------*/
+.btn-yellow
+{
+	background: var(--yellow-color);
+	transition: 0.3s ease-in-out;
+}
+
+.btn-yellow:hover
+{
+	background: var(--blue-color);
+}
+
+.btn-yellow > a
+{
+	color: #000;
+}
+
+.btn-yellow:hover > a
+{
+	color: var(--fourth-color);
+}
+
+.btn-yellow
+{
+	background: var(--yellow-color);
+	transition: 0.3s ease-in-out;
+}
+
+.btn-yellow:hover
+{
+	background: var(--blue-color);
+}
+
+.btn-yellow a
+{
+	color: var(--third-color);
+}
+
+.btn-yellow:hover > a
+{
+	color: var(--fourth-color);
+}
+
+/*------------ Full width button ------------*/
+.btn-full-w
+{
+	padding: 1.2rem 2rem;
+	display: block;
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+
+
+/*----------------- Hero section styling ----------------*/
+.hero
+{
+	background: linear-gradient(rgba(150, 60, 221, 0.4), rgba(22, 104, 184, 0.9)), url("../poze/tori.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hero .hero-container
+{	
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.hero-container .row > .col
+{
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+}
+
+.hero-content
+{
+	padding: 0 2rem 3.6rem 2rem;
+}
+
+.hero-heading
+{
+	font-size: 2.3rem;
+	line-height: 1.1;
+}
+
+.inner-row .inner-col
+{
+	margin: 1rem 0;
+}
+/*----------------- Hero section styling ----------------*/
+
+/*----------------- Services section styling ---------------*/
+/* Services section starts */
+.our-services .service {
+	display: inline-block; /* Transformă elementele în elemente inline-block */
+	border: none;
+	border-radius: 10px;
+	margin: 1.5rem;
+	padding: 1.8rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.our-services .service:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.service-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; /* Asigură afișarea proporțională a imaginii în interiorul containerului */
+    width: auto; /* Lățimea va fi ajustată proporțional la înălțimea imaginii */
+    max-height: 100%; /* Înălțimea maximă va fi 100% pentru a se adapta la conținutul containerului */
+}
+.our-services ion-icon {
+	color: var(--yellow-color);
+	font-size: 2.6rem;
+}
+
+.our-services .service-heading {
+	font-weight: 600;
+}
+/* Services section ends */
+
+/*----------------- Services section styling ---------------*/
+
+/*----------------- Agent card styling -----------------------*/
+.agent-card
+{
+	text-align: center;
+}
+
+.agent-img
+{
+	border-radius: 50%;
+}
+
+.agent-name
+{
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.agent-number, .agent-email
+{
+	margin: 1rem 0;
+	font-size: 0.9rem;
+}
+/*----------------- Agent card styling -----------------------*/
+
+
+/*----------------- Footer styling ------------------*/
+footer
+{
+	background: #251963;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.6rem 0;
+}
+/*----------------- Footer styling ------------------*/
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*-------------------- Desktop Screen Styling ------------------*/
+/*--------------------------------------------------------------*/
+@media screen and (min-width: 789px)
+{
+	.container, .hero-container
+	{
+		max-width: 1180px;
+		margin: 0 auto;
+	}
+
+	.container
+	{
+		padding: 4rem 0;
+	}
+
+	.heading
+	{
+		font-size: 3.2rem;
+	}
+
+	.para-line
+	{
+		line-height: 1.8;
+	}
+
+	.sub-heading
+	{
+		font-size: 1rem;
+	}
+
+	.row
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.row .col
+	{
+		width: 100%;
+	}
+
+	.inner-row
+	{
+		display: flex;
+		gap: 2rem;
+	}
+
+
+	/*-------------- Hero section styling ------------------*/
+	.hero-container .row > .hero-content
+	{
+		width: 140%;
+	}
+
+	.hero-heading
+	{
+		font-size: 4rem;
+	}
+
+	.hero
+	{
+		background: linear-gradient(rgba(150, 60, 221, 0.2), rgba(13, 14, 56, 0.9)), url("../poze/tori.png");
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	/*-------------- Hero section styling ------------------*/
+
+
+	
+
+	/*-------------- Services section styling --------------*/
+	.our-services
+	{
+		text-align: center;
+	}
+
+	.our-services .container .head-desc
+	{
+		max-width: 66%;
+		margin: 0 auto;
+	}
+
+	.services, .partners-grid
+	{
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2rem;
+	}
+	/*-------------- Services section styling --------------*/
+

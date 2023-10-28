@@ -1,0 +1,273 @@
+/*------------------ Breadcrumb styling --------------------*/
+.breadcrumbs
+{
+	background: linear-gradient(rgba(150, 60, 221, 0.1), rgba(17, 17, 69, 0.8)), url('../poze/imagine.jpeg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.breadcrumb-container
+{
+	height: 34vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1.5rem;
+}
+
+.breadcrumb-container .hero-heading
+{
+	font-size: 3rem;
+}
+/*------------------ Breadcrumb styling --------------------*/
+/*------------------ Asigurare rca --------------------*/
+.rca {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .rca h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .rca label,
+        .rca input {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .rca input[type="text"],
+        .rca input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .rca input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .rca input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .rca input[type="submit"]:focus {
+            outline: none;
+        }
+/*------------------ Insurance description --------------------*/
+.insurance-features
+{
+	font-size: 0.8rem;
+	font-weight: 600;
+	line-height: 1.6;
+	margin: 1rem 1.7rem 1rem 0;
+}
+
+.insurance-features ion-icon
+{
+	color: var(--yellow-color);
+}
+
+.desc-content .para-line
+{
+	margin: 1rem 0;
+}
+
+.desc-img-content
+{
+	margin: 2rem 0;
+}
+
+.insurance-detail-img
+{
+	border: none;
+	border-radius: 6px;
+}
+/*------------------ Insurance description --------------------*/
+
+/*------------------ asigurare casco --------------------*/
+.casco {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .casco h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .casco label,
+        .casco input {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .casco input[type="text"],
+        .casco input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .casco input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .casco input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .casco input[type="submit"]:focus {
+            outline: none;
+        }
+
+/*--------------------- Plocies description ---------------------*/
+.single-policy
+{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 1.6rem 0;
+}
+
+.single-policy ion-icon
+{
+	color: var(--yellow-color);
+	font-size: 2rem;
+}
+/*--------------------- Plocies description ---------------------*/
+
+
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/*-------------------- Desktop screen styling -------------------*/
+/*---------------------------------------------------------------*/
+@media screen and (min-width: 789px)
+{
+	/*----------- Breadcrumb styling ----------*/
+	.breadcrumb-container 
+	{
+		height: 50vh;
+	}
+
+
+	/*----------- description styling --------------*/
+	.description
+	{
+		background-image: linear-gradient(
+		  155deg,
+		  hsl(215deg 100% 98%) 0%,
+		  hsl(215deg 100% 98%) 30%,
+		  hsl(215deg 100% 98%) 38%,
+		  hsl(215deg 100% 98%) 43%,
+		  hsl(215deg 100% 98%) 47%,
+		  hsl(215deg 100% 98%) 48%,
+		  hsl(215deg 100% 98%) 50%,
+		  hsl(215deg 100% 98%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 50%,
+		  hsl(215deg 100% 99%) 51%,
+		  hsl(215deg 100% 100%) 53%,
+		  hsl(215deg 100% 100%) 55%,
+		  hsl(215deg 100% 100%) 60%,
+		  hsl(215deg 100% 100%) 68%,
+		  hsl(0deg 0% 100%) 96%
+		);
+	}
+
+	.description .container .row
+	{
+		gap: 4rem;
+	}
+
+	.desc-content
+	{
+		width: 150% !important;
+	}
+
+	.insurance-features
+	{
+		font-size: 0.9rem;
+	}
+
+
+	/*---------------- policy styling --------------------*/
+	.policies
+	{
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2rem;
+	}
+
+	.single-policy
+	{
+		flex-direction: row;
+	}
+
+
+	/*----------------- Agents styling --------------------*/
+	.agents
+	{
+		flex-direction: row;
+		gap: 4rem;
+	}
+
+
+	/*----------------- Insurance pack ------------------------*/
+	.ins-pack-row
+	{
+		align-items: flex-start;
+	}
+
+	.insurance-features
+	{
+		margin-top: 0;
+	}
+
+
+	/*----------------------- Quotation ----------------------*/
+	.quoatation
+	{
+		background: #f3f8ff;
+	}
+	/*----------------------- Quotation ----------------------*/
+}

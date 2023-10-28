@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trotinete </title>
+	<meta name="description" content="Insurancy is sharp Insurance agency website template based on HTML CSS and JavaScript specially designed for insurance company, insurance agency and startup agency.">
+    <meta name="keywords" content="insurance broker website template, website template for insurance company, insurance website templates free download, insurance company website template, life insurance website template, insurance agency website template, auto insurance website template, insurance agency, html5 website template, insurance website examples, car insurance website template, insurance responsive website template free download">
+    <meta name="author" content="atulcodex - Atul Prajapati | Web Developer">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="poze/eco.png">
+
+	<!-- External CSS link -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Ionic icons CDN -->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+	<!-- Jquery CDN link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="">
+	<!-- Scroll to top starts -->
+	<button id="topBtn">
+	  	<ion-icon name="arrow-up-outline"></ion-icon>
+	</button>
+	<!-- Scroll to top ends -->
+
+	<!-- Navigation starts -->
+	<nav>
+		<div class="menu-container nav-wrapper">
+			<div class="brand">
+				<a href="index.html">
+					<img class="logo" src="poze/tro.png" alt="insurancy-logo" border="0">
+				</a>
+			</div>
+
+			
+
+			<ul class="nav-list">
+				<li class="active"><a href="index.html">Pagina Principală</a></li>
+				<li><a href="rezervare.html">Rezervare</a></li>
+				
+				<li><a href="news.html">Noutăți</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				
+				</li> 
+				<li>
+					<button class="btn btn-blue">
+						 <a href="login.html">Exit</a>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- Navigation ends -->
+
+
+	<!-- Hero section starts -->
+	<section class="hero">
+		<div class="hero-container">
+			<div class="row">
+				<div class="col hero-content">
+					<h2 class="hero-heading white">
+						Trotinete electrice
+					</h2>
+					<p class="para-line white">
+						Trotinetele electrice reprezintă libertatea de a explora orașul în mod ecologic și plin de energie. Fiecare călătorie pe trotinetă este o oportunitate de a descoperi noi rute și de a contribui la un mediu mai curat!
+					</p>
+					<div class="inner-row">
+						<div class="inner-col">
+							<button class="btn btn-full-w btn-blue">
+								<a href="insurance-details.html">Afla mai multe</a>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col hero-blank-col"></div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section ends -->
+	
+	<!-- Services section starts -->
+	<section class="our-services">
+		<div class="container">
+			<img src="poze/trotineta.jpeg" class="service-img" alt="Our Services" title="Our Services" style="width: 600px; height:500px; ">
+
+			<h4 class="sub-heading">Serviciile noastre</h4>
+			<h2 class="heading">
+				Gestionarea trotinetelor
+			</h2>
+			<p class="para-line head-desc">
+				Gestioneaza-ti corect trotineta electrica!
+			</p>
+
+				<div class="service">
+					<ion-icon name="battery-charging-outline"></ion-icon>
+					<!-- <h2 class="service-heading">RCA</h2> -->
+				</div>
+				<div class="service">
+					<ion-icon name="leaf-outline"></ion-icon>
+				<!--	<h2 class="service-heading">CASCO</h2>	-->	
+				</div>
+		</div>
+	</section>
+	<!-- Services section ends -->
+
+
+	<!-- ---------------------- Footer ------------------ -->
+	<footer>
+		<div class="footer-container">
+			<p class="para-line white">Pentru mai multe detalii puteti suna la numarul de telefon: +40 7303033652</p>
+		</div>
+	</footer>
+	<!-- ----------------------- Footer ------------------- -->
+	
+
+
+
+	<!-------------- Importing JS file -------------->
+	<script src="js/script.js"></script>
+
+	
+	<script>
+		// ------------------------ Scroll to top button --------------------
+		$(document).ready(function(){
+		  $(window).scroll(function(){
+		    if($(this).scrollTop() > 40)
+		    {
+		      $('#topBtn').fadeIn();
+		    }
+		    else
+		    {
+		      $('#topBtn').fadeOut();
+		    }
+		  });
+		  
+		   $("#topBtn").click(function(){
+		      $('html, body').animate({scrollTop: 0},800);
+		   });             
+		});
+		// ------------------------ Scroll to top button --------------------
+	</script>
+</body>
+</html>
